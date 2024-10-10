@@ -9,17 +9,17 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const books = JSON.stringify([
+const books = [
     {isbn: '1', name: 'Book 1', price: '100.000 VND', desciption: 'Description 1'},
     {isbn: '2', name: 'Book 2', price: '200.000 VND', desciption: 'Description 2'},
     {isbn: '3', name: 'Book 3', price: '300.000 VND', desciption: 'Description 3'}
-]);
+];
 
-const authors = JSON.stringify([
+const authors = [
     {id: '1', name: 'Author 1', dob: '01/01/1991', avatar: 'https://www.w3schools.com/w3images/avatar2.png'},
     {id: '2', name: 'Author 2', dob: '02/02/1992', avatar: 'https://www.w3schools.com/w3images/avatar3.png'},
     {id: '3', name: 'Author 3', dob: '03/03/1993', avatar: 'https://www.w3schools.com/w3images/avatar4.png'}
-]);
+];
 
 //Xem thông tin sách và tác giả
 app.get('/getBooks', function (req, res) {
